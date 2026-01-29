@@ -15,7 +15,7 @@ const App = () => {
     <div>
       {/* Do not remove the main div */}
       <input type="number" onInput={handelsum} />
-      <p>Sum: {sum}</p>
+      <h1>Sum: {sum}</h1>
     </div>
   );
 };
