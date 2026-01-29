@@ -1,13 +1,23 @@
-
 import React from "react";
-import './../styles/App.css';
+import "./../styles/App.css";
+import { useState, useEffect } from "react";
 
 const App = () => {
+  const [sum, setSum] = useState(0);
+  function handelsum(e) {
+    setSum(sum + +e.target.value);
+  }
+  // useEffect(() => {
+
+  // }, [sum]);
+
   return (
     <div>
-        {/* Do not remove the main div */}
+      {/* Do not remove the main div */}
+      <input type="number" onInput={handelsum} />
+      <p>Sum: {sum}</p>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
